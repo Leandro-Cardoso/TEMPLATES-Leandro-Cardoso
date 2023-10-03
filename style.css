@@ -1,0 +1,226 @@
+/* BASE */
+:root {
+    --color-primary: #095;
+    --color-secundary: #0ea;
+    --color-bg: #eee;
+    --color-primary-font: #eee;
+    --color-bg-font: #111;
+
+    --size-font: 1rem;
+    --size-font-h1: 5em;
+    --size-font-h2: 2em;
+    --size-font-h3: 1.5em;
+}
+
+.dark {
+    --color-primary: #222;
+    --color-bg: #444;
+    --color-bg-font: #bbb;
+}
+
+@font-face {
+    font-family: 'TitilliumWeb';
+    src: url("./assets/fonts/TitilliumWeb-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'TitilliumWeb', monospace;
+    font-size: var(--size-font);
+
+    background: var(--color-bg);
+    color: var(--color-bg-font);
+
+    display: flex;
+}
+
+menu {
+    width: 300px;
+    min-width: 300px;
+
+    background: var(--color-primary);
+    color: var(--color-primary-font);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+main {
+    width: 100%;
+    padding: 50px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bolder;
+
+    color: var(--color-primary);
+    transition: color .2s;
+}
+
+a:hover {
+    color: var(--color-secundary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bolder;
+}
+
+h1 {
+    font-size: var(--size-font-h1);
+}
+
+h2 {
+    font-size: var(--size-font-h2);
+}
+
+h3, h4, h5, h6 {
+    font-size: var(--size-font-h3);
+}
+
+/* PROFILE */
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#profile h1 {
+    font-size: var(--size-font-h2);
+}
+
+#profile img {
+    width: 200px;
+
+    border-radius: 50%;
+}
+
+.dark #profile img {
+    filter: grayscale(100%);
+}
+
+/* SOCIAL */
+#social {
+    display: flex;
+    gap: 10px;
+}
+
+#social svg {
+    width: 30px;
+
+    fill: var(--color-primary-font);
+    transition: fill .2s;
+}
+
+#social svg:hover {
+    fill: var(--color-secundary);
+}
+
+/* MAIN MENU */
+#main-menu {
+    margin-left: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    gap: 10px;
+}
+
+#main-menu a {
+    color: var(--color-primary-font);
+    transition: color .2s;
+}
+
+#main-menu a:hover {
+    color: var(--color-secundary);
+}
+
+/* DARK MODE */
+#dark-mode {
+    width: 64px;
+    height: 10px;
+
+    border: 2px solid var(--color-primary-font);
+    border-radius: 5px;
+
+    position: relative;
+}
+
+#dark-mode div {
+    width: 30px;
+    height: 30px;
+
+    background: var(--color-primary-font);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+
+    animation: slide-to-left .2s;
+}
+
+.dark #dark-mode div {
+    animation: slide-to-right .2s forwards;
+}
+
+#dark-mode svg {
+    width: 20px;
+
+    fill: var(--color-primary);
+}
+
+#dark-mode #moon {
+    display: none;
+}
+
+.dark #dark-mode #moon{
+    display: block;
+}
+
+.dark #dark-mode #sun{
+    display: none;
+}
+
+@keyframes slide-to-right {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-to-left {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+/* ABOUT PREVIEW */
+/* Leandro Cardoso, Software Engineer, sort description, (+) more button, (pdf) resume button, pic */
+
+/* PROJECTS CARDS PREVIEW */
+/* Title, tech SVGs, sort description */
+
+/* BLOG PREVIEW */
+/* Title, sort description */
