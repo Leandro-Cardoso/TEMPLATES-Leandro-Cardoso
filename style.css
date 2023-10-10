@@ -221,16 +221,29 @@ h3, h4, h5, h6 {
     margin-bottom: 40px;
 
     display: flex;
+    justify-content: space-between;
 }
 
 .about-preview img {
     width: 300px;
     margin-left: 30px;
 }
-/* Leandro Cardoso, Software Engineer, sort description, (+) more button, (pdf) resume button, pic */
+/* (+) more button, (pdf) resume button */
 
 /* PROJECT CARDS PREVIEW */
-/* Title, tech SVGs, sort description */
+.project-cards-container {
+    margin-bottom: 40px;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card-preview {
+    width: 300px;
+}
+/* tech SVGs, na cor das fontes */
 
 /* BLOG PREVIEW */
 /* Title, sort description */
